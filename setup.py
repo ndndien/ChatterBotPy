@@ -44,7 +44,7 @@ with open('requirements.txt') as requirements:
 
 
 setup(
-    name='ChatterBot',
+    name='ChatterBotPy',
     version=VERSION,
     url=URL,
     download_url='{}/tarball/{}'.format(URL, VERSION),
