@@ -24,10 +24,10 @@ config_file_path = os.path.join(current_directory, 'setup.cfg')
 
 config.read(config_file_path)
 
-VERSION = config['chatterbot']['version']
-AUTHOR = config['chatterbot']['author']
-AUTHOR_EMAIL = config['chatterbot']['email']
-URL = config['chatterbot']['url']
+VERSION = config['chatterbot_py']['version']
+AUTHOR = config['chatterbot_py']['author']
+AUTHOR_EMAIL = config['chatterbot_py']['email']
+URL = config['chatterbot_py']['url']
 
 with open('README.md') as f:
     LONG_DESCRIPTION = f.read()
@@ -57,15 +57,15 @@ setup(
     author=AUTHOR,
     author_email=AUTHOR_EMAIL,
     packages=[
-        'chatterbot',
-        'chatterbot.storage',
-        'chatterbot.logic',
-        'chatterbot.ext',
-        'chatterbot.ext.sqlalchemy_app',
-        'chatterbot.ext.django_chatterbot',
-        'chatterbot.ext.django_chatterbot.migrations',
+        'chatterbot_py',
+        'chatterbot_py.storage',
+        'chatterbot_py.logic',
+        'chatterbot_py.ext',
+        'chatterbot_py.ext.sqlalchemy_app',
+        'chatterbot_py.ext.django_chatterbot',
+        'chatterbot_py.ext.django_chatterbot.migrations',
     ],
-    package_dir={'chatterbot': 'chatterbot'},
+    package_dir={'chatterbot_py': 'chatterbot_py'},
     include_package_data=True,
     install_requires=REQUIREMENTS,
     dependency_links=DEPENDENCIES,
